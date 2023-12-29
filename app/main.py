@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from routers.api_v1 import api_router
+from chat.api.routers.api_v1 import api_router
 
 app = FastAPI(title="TG BOT API", version="0.0.1")
 

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends, Header, Response
-from utils.message_handler import MessageHandler
-from utils.llm_manager import GeminiLLMManager
+from mid.message_handler import MessageHandler
+from mid.llm.llm_manager import GeminiLLMManager
 
 from utils.permissions import verify_api_key
 from config.config import settings

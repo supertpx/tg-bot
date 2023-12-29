@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from api.endpoints.v1 import conversation, conversation_delete
+from api.v1 import conversation, conversation_delete
 
 api_router = APIRouter()
 
