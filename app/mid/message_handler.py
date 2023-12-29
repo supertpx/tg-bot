@@ -2,7 +2,7 @@ import logging
 
 from typing import AsyncIterable
 
-from utils.llm_manager import GeminiLLMManager
+from app.mid.llm.llm_manager import GeminiLLMManager
 
 logger = logging.getLogger(__name__)
 
