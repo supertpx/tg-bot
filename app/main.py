@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from chat.api.routers.api_v1 import api_router
+from langchain.tools import DuckDuckGoSearchResults
+from langchain.utilities import DuckDuckGoSearchAPIWrapper
 
 app = FastAPI(title="TG BOT API", version="0.0.1")
 
@@ -17,4 +19,7 @@ app.add_middleware(
 app.include_router(api_router)
 
 if __name__ == "__main__":
-    uvicorn.run(app="main:app", reload=True)
+    # uvicorn.run(app="main:app", reload=True)
+    wrapper = DuckDuckGoSearchAPIWrapper(region="wt-wt", time="m", max_results=10)
+    search = DuckDuckGoSearchResults(api_wrapper=wrapper)
+    print(search.run("明天深圳的天气如何"))

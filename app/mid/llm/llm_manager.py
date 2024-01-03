@@ -4,7 +4,7 @@ from typing import AsyncIterable
 from langchain.schema.messages import HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.callbacks import AsyncIteratorCallbackHandler
-from app.mid.db.sql_manager import SqlManager
+from ..db.sql_manager import SqlManager
 
 from config.config import settings
 

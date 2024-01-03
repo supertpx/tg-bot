@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends, Header
 from fastapi.responses import StreamingResponse
-from api.chat import ChatRequest
+from chat.api.chat import ChatRequest
 from mid.message_handler import MessageHandler
 from mid.llm.llm_manager import GeminiLLMManager
 
